@@ -1,0 +1,529 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="./assets/images/logo2.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        pOrangred: '#FF6B2C',
+                        pBlue: '#5857FF',
+                        pBg: '#E9E9E9',
+                        pWhite: '#Ffffff',
+                        pBlack: '#000000'
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=en_RU&amp;apikey=<your API-key>" type="text/javascript"></script>
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Insell</title>
+</head>
+
+<body>
+
+
+</div>
+    <div class="modal modal-xl fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-pBg">
+                <div class="modal-header py-[10px]">
+                    <h5></h5>
+                    <button class="btn" data-bs-dismiss="modal" aria-label="Close">&#10006;</button>
+                </div>
+                <div class="modal-body">
+                    <iframe class="w-full h-[500px] max-[400px]:h-[350px]"
+                        src="https://www.youtube.com/embed/0Upayzo8pmU?si=xBqVw9i0VkUMipFc" title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="navigation bg-pBg sticky top-[0] z-[5] ">
+        <div class="absolute w-full h-full blur-[2px]"></div>
+        <div class="container relative z-[6]">
+            <div class="flex justify-between py-[20px]">
+                <div>
+                    <img src="./assets/images/logo1.png" class="w-[120px] max-[400px]:w-[100px]" alt="">
+                </div>
+                <div class="flex items-center gap-3">
+                    <h1>
+                        <a href="tel:+998 33 519 09 01">
+                            <p class="text-[30px] text-pOrangred max-[600px]:text-[25px] max-[400px]:text-[18px]"
+                                style="font-weight: 700;">+998 33 519 09 01</p>
+                        </a>
+                    </h1>
+                    <a href="#aloqa"
+                        class="bg-pOrangred text-pWhite py-2 px-4 rounded-[25px] text-[26px] max-[650px]:hidden "
+                        style="font-weight: 600;">Ariza qoldirish</a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="hero bg-pBg">
+        <div class="container">
+            <div class="py-[200px] flex justify-between max-[1015px]:flex-wrap max-[1015px]:pt-[20px]">
+                <div class=" max-[1015px]:w-full">
+                    <div class="my-4 max-[490px]:w-full" data-aos="fade-up" data-aos-duration="500">
+                        <h1
+                            class="bg-pBlue text-pWhite font-bold inline-block py-2 px-6 rounded-[20px] text-[22px] max-[610px]:text-[18px] max-[490px]:mb-3">
+                            Boshlang</h1>
+                        <h1
+                            class="bg-pBlue text-pWhite font-bold inline-block py-2 px-6 rounded-[20px] text-[22px] max-[610px]:text-[18px] max-[490px]:translate-x-[20px]">
+                            Ma'lumotlaringizni yuklang</h1>
+
+                    </div>
+                    <div
+                        class="my-4 translate-x-[60px] initial-block max-[550px]:translate-x-[20px] max-[490px]:w-full max-[490px]:translate-x-[0]">
+                        <h1 data-aos="fade-up" data-aos-duration="700"
+                            class="bg-pBlue text-pWhite font-bold inline-block py-2 px-6 rounded-[20px] text-[22px]  max-[610px]:text-[18px] max-[490px]:mb-3 max-[490px]:ml-[70px]">
+                            Boshqaring</h1>
+                        <h1 data-aos="fade-up" data-aos-duration="700"
+                            class="bg-pBlue text-pWhite font-bold inline-block py-2 px-6 rounded-[20px] text-[22px]  max-[610px]:text-[18px] max-[490px]:ml-[30px]">
+                            Hissobotlaringizni oling</h1>
+
+                    </div>
+                    <div class="my-4 max-[490px]:w-full" data-aos="fade-up" data-aos-duration="900">
+                        <div
+                            class="bg-pBlue text-pWhite font-bold inline-block py-2 px-6 rounded-[20px] flex items-center gap-3 w-[450px] max-[490px]:w-full justify-between">
+                            <h2 class="text-[22px] font-bold  max-[610px]:text-[18px]">Bir necha soniya ichida</h2> <img
+                                src="./assets/images/logo1.png"
+                                class="w-[120px] h-[40px] object-cover  max-[610px]:w-[100px]  max-[610px]:h-none  max-[610px]:object-contain"
+                                alt="">
+                        </div>
+
+                    </div>
+                    <div class="mt-20 flex items-center gap-4 max-[490px]:justify-center" data-aos="fade-up"
+                        data-aos-duration="700">
+                        <img src="./assets/images/kamon.png"
+                            class="w-[78px] h-[78px] object-cover max-[490px]:w-[50px] max-[490px]:h-[50px]" alt="">
+                        <a href="#aloqa"
+                            class="bg-pOrangred text-pWhite py-2 px-6 rounded-[25px] text-[26px] hover:scale-[1.05] duration-[0.3s] max-[490px]:text-[20px]"
+                            style="font-weight: 600;">Foydalanish uchun aloqa</a>
+                    </div>
+                </div>
+                <div class="translate-y-[-100px] max-[1015px]:w-full  max-[1015px]:translate-y-[0]">
+                    <img src="./assets/images/Group_54.png" data-aos="fade-up" data-aos-duration="700"
+                        class="w-[482px] h-[345] object-cover " alt="">
+                    <div class="bg-pBlue inline-block rounded-[25px] p-[20px] w-[300px] relative" data-aos="fade-up"
+                        data-aos-duration="900">
+                        <h2 class="text-[45px] font-bold text-pOrangred">3 oy</h2>
+                        <p class="text-[20px] font-bold text-pWhite">bepul foydalanib <br> ko'ring.</p>
+                        <img src="./assets/images/price.png"
+                            class="absolute top-[-50px] right-[-100px] w-[180px] h-[180px] object-cover max-[490px]:w-[120px] max-[490px]:h-[120px] max-[490px]:top-[-30px] max-[490px]:right-[-50px]"
+                            alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-pBg pb-[100px]">
+        <div class="container" data-aos="fade-up" data-aos-duration="500">
+            <div
+                class="bg-pBlue flex gap-20 max-[1280px]:gap-0 relative rounded-[40px] px-[60px] max-[400px]:px-[15px] max-[1280px]:flex-col max-[1280px]:justify-center h-none">
+                <div class="max-[1280px]:hidden max-[1280px]:mt-[100px] flex justify-center items-center"
+                    data-aos="fade-up" data-aos-duration="700">
+                    <img src="./assets/images/smilk.png" class="w-[300px] h-[300px] object-cover" alt="">
+                </div>
+                <div class="w-full ">
+                    <div class=" ">
+                        <div
+                            class="w-6/12 h-[117px] bg-pOrangred rounded-[30px] absolute top-[-40%] translate-y-[50%] left-[50%] translate-x-[-50%] max-[1280px]:top-[-20%] max-[620px]:top-[-15%] max-[500px]:w-10/12 max-[500px]:h-[70px] max-[500px]:top-[-65px] ">
+                            <div
+                                class="flex items-center justify-center text-center px-[10px] font-bold text-[35px] text-pWhite w-full h-full max-[770px]:text-[25px] max-[500px]:text-[18px]">
+                                insell savdo platformasi haqida
+                            </div>
+                        </div>
+                    </div>
+                    <div class="translate-y-[60px]">
+                        <h1 class="text-pWhite text-[30px] max-[500px]:text-[20px]" data-aos="fade-up"
+                            data-aos-duration="700 "><span class="text-pOrangred font-semibold">INSELL Savdo
+                                Platformasi</span>
+                            14 turdagi savdo do'konlari uchun mahsus ishlab chiqilgan bo'lib, barcha
+                            yo'nalishlarni o'ziga hosligi hisobga olingan. Boshqa savdo dasturlaridan farqli INSELL
+                            Savdo Platformasi shablon emas sizning barcha hohish istaklaringiz asosida ishlab chiqilgan.
+                        </h1>
+                    </div>
+
+                </div>
+                <div class="max-[1280px]:flex   w-full hidden  max-[1280px]:mt-[100px] flex justify-center items-center"
+                    data-aos="fade-up" data-aos-duration="700">
+                    <img src="./assets/images/smilk.png"
+                        class="w-[300px] h-[300px] object-cover max-[500px]:w-[150px] max-[500px]:h-[150px]" alt="">
+                </div>
+                <img src="./assets/images/joystik.png"
+                    class="w-[185px] h-[185px] object-cover absolute bottom-[-60px] right-[-70px] max-[1280px]:mb-3 max-[1280px]:mb-3 max-[500px]:w-[100px] max-[500px]:h-[100px] max-[500px]:right-[0]"
+                    alt="">
+            </div>
+        </div>
+    </div>
+    <div class="bg-pBg">
+        <div class="container">
+            <div>
+                <div class="flex justify">
+                    <div class="w-6/12" data-aos="fade-up" data-aos-duration="500">
+                        <img src="./assets/images/karnay.svg"
+                            class="w-[140px] h-[140px] object-cover translate-y-[70px] max-[600px]:w-7/12 max-[600px]:h-none max-[600px]:translate-y-[-10px] max-[600px]:translate-y-[0] max-[600px]:w-[100px] max-[600px]:h-[100px]"
+                            alt="">
+                    </div>
+                    <div class="relative cursor-pointer max-[600px]:w-full" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal" data-aos="fade-up" data-aos-duration="500">
+                        <img src="./assets/images/bg_image.png" class="max-[600px]:w-full" alt="">
+                        <img src="./assets/images/play.svg"
+                            class="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] max-[600px]:w-[75px] max-[600px]:h-[75px]"
+                            alt="">
+                    </div>
+                </div>
+                <div class="translate-y-[-150px] max-[600px]:translate-y-[-50px] bg-transparent select-none">
+                    <h1
+                        class="text-[110px] text-pBlue font-bold max-[1200px]:text-[90px] max-[900px]:text-[65px] max-[600px]:text-[40px] max-[400px]:text-[25px]">
+                        <span class="text-pOrangred">INSELL</span> Savdo
+                        Platformasi haqida hoziroq bilib oling
+                    </h1>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-pBg">
+        <div class="container">
+            <h1 class="text-[70px] text-pBlack font-bold w-9/12 max-[780px]:w-full max-[780px]:text-[55px] max-[600px]:text-[40px] max-[400px]:text-[25px]"
+                data-aos="fade-up" data-aos-duration="500"><span class="text-pOrangred ">INSELL</span> Savdo <br>
+                Platformasi quyidagilarga tavsiya qilinadi:
+            </h1>
+            <div class="flex inline-block mt-[30px]  gap-8 mb-[40px] max-[1000px]:flex-wrap">
+                <div class="  bg-pBlue p-[6px] w-[341px] rounded-[25px] max-[740px]:w-full" data-aos="fade-up"
+                    data-aos-duration="500">
+                    <div class="flex items-center justify-center">
+                        <img src="./assets/images/gul.jpg" class="w-full h-[179px] object-cover rounded-[20px]" alt="">
+                    </div>
+                    <div class=" px-[24px]">
+                        <h1 class="text-[24px] text-pWhite text-center font-bold">Gul savdosi uchun mahsus savdo avtomatizatsiyasi</h1>
+                        <p class="text-[18px] text-pWhite text-center font-normal hidden"> Все рекламные кампании ваших
+                            клиентов
+                            хранятся вместе и их удобно редактировать</p>
+
+                    </div>
+                </div>
+                <div class=" bg-pBlue p-[6px] w-[341px] rounded-[25px] max-[740px]:w-full" data-aos="fade-up"
+                    data-aos-duration="700">
+                    <div class="flex items-center justify-center">
+                        <img src="./assets/images/kompyuter.jpg" class="w-full h-[179px] object-cover rounded-[20px]"
+                            alt="">
+                    </div>
+                    <div class=" px-[24px]">
+                        <h1 class="text-[24px] text-pWhite text-center font-bold">Kampyuter savdosi uchun mahsus savdo avtomatizatsiyasi</h1>
+                        <p class="text-[18px] text-pWhite text-center font-normal hidden"> Все рекламные кампании ваших
+                            клиентов
+                            хранятся вместе и их удобно редактировать</p>
+
+                    </div>
+                </div>
+                <div class=" bg-pBlue p-[6px] w-[341px] rounded-[25px] max-[740px]:w-full" data-aos="fade-up"
+                    data-aos-duration="900">
+                    <div class="flex items-center justify-center">
+                        <img src="./assets/images/telefon.jpg" class="w-full h-[179px] object-cover rounded-[20px]"
+                            alt="">
+                    </div>
+                    <div class=" px-[24px]">
+                        <h1 class="text-[24px] text-pWhite text-center font-bold">Telefon savdosi uchun mahsus savdo avtomatizatsiyasi</h1>
+                        <p class="text-[18px] text-pWhite text-center font-normal hidden"> Все рекламные кампании ваших
+                            клиентов
+                            хранятся вместе и их удобно редактировать</p>
+
+                    </div>
+                </div>
+            </div>
+            <div
+                class="flex inline-block   gap-8 translate-x-[150px] max-[1280px]:translate-x-[0] max-[1280px]:justify-center  mb-[40px] max-[1000px]:flex-wrap">
+                <div class="  bg-pBlue p-[6px] w-[341px] rounded-[25px] max-[740px]:w-full" data-aos="fade-up"
+                    data-aos-duration="500">
+                    <div class="flex items-center justify-center">
+                        <img src="./assets/images/xozmag.jpg" class="w-full h-[179px] object-cover rounded-[20px]"
+                            alt="">
+                    </div>
+                    <div class=" px-[24px]">
+                        <h1 class="text-[24px] text-pWhite text-center font-bold">Xozmag savdosi uchun mahsus savdo avtomatizatsiyasi</h1>
+                        <p class="text-[18px] text-pWhite text-center font-normal hidden"> Все рекламные кампании ваших
+                            клиентов
+                            хранятся вместе и их удобно редактировать</p>
+
+                    </div>
+                </div>
+                <div class=" bg-pBlue p-[6px] w-[341px] rounded-[25px] max-[740px]:w-full" data-aos="fade-up"
+                    data-aos-duration="700">
+                    <div class="flex items-center justify-center">
+                        <img src="./assets/images/mebel.jpg" class="w-full h-[179px] object-cover rounded-[20px]"
+                            alt="">
+                    </div>
+                    <div class=" px-[24px]">
+                        <h1 class="text-[24px] text-pWhite text-center font-bold">Mebel savdosi uchun mahsus savdo avtomatizatsiyasi</h1>
+                        <p class="text-[18px] text-pWhite text-center font-normal hidden"> Все рекламные кампании ваших
+                            клиентов
+                            хранятся вместе и их удобно редактировать</p>
+
+                    </div>
+                </div>
+                <div class=" bg-pBlue p-[6px] w-[341px] rounded-[25px] max-[740px]:w-full" data-aos="fade-up"
+                    data-aos-duration="900">
+                    <div class="flex items-center justify-center">
+                        <img src="./assets/images/kiyim.jpg" class="w-full h-[179px] object-cover rounded-[20px]"
+                            alt="">
+                    </div>
+                    <div class=" px-[24px]">
+                        <h1 class="text-[24px] text-pWhite text-center font-bold">Kiyim kechak savdosi uchun mahsus savdo avtomatizatsiyasi</h1>
+                        <p class="text-[18px] text-pWhite text-center font-normal hidden"> Все рекламные кампании ваших
+                            клиентов
+                            хранятся вместе и их удобно редактировать</p>
+
+                    </div>
+                </div>
+            </div>
+            <div
+                class="flex inline-block   gap-8 translate-x-[300px] max-[1280px]:translate-x-[0] max-[1280px]:justify-center pb-[40px] max-[1000px]:flex-wrap">
+                <div class="  bg-pBlue p-[6px] w-[341px] rounded-[25px] max-[740px]:w-full" data-aos="fade-up"
+                    data-aos-duration="500">
+                    <div class="flex items-center justify-center">
+                        <img src="./assets/images/avto.jpg" class="w-full h-[179px] object-cover rounded-[20px]" alt="">
+                    </div>
+                    <div class=" px-[24px]">
+                        <h1 class="text-[24px] text-pWhite text-center font-bold">Avtomobil aksesuarlari savdosi  uchun mahsus savdo avtomatizatsiyasi</h1>
+                        <p class="text-[18px] text-pWhite text-center font-normal hidden"> Все рекламные кампании ваших
+                            клиентов
+                            хранятся вместе и их удобно редактировать</p>
+
+                    </div>
+                </div>
+                <div class=" bg-pBlue p-[6px] w-[341px] rounded-[25px] max-[740px]:w-full" data-aos="fade-up"
+                    data-aos-duration="700">
+                    <div class="flex items-center justify-center">
+                        <img src="./assets/images/kitob.jpg" class="w-full h-[179px] object-cover rounded-[20px]"
+                            alt="">
+                    </div>
+                    <div class=" px-[24px]">
+                        <h1 class="text-[24px] text-pWhite text-center font-bold">Kitob savdosi uchun mahsus savdo avtomatizatsiyasi</h1>
+                        <p class="text-[18px] text-pWhite text-center font-normal hidden"> Все рекламные кампании ваших
+                            клиентов
+                            хранятся вместе и их удобно редактировать</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-pBg pt-[100px] hidden">
+        <div class="container">
+            <div>
+                <div class="flex max-[400px]:items-start">
+                    <div class="w-6/12" data-aos="fade-up" data-aos-duration="700">
+                        <img src="./assets/images/karnay.svg"
+                            class="w-[140px] h-[140px] object-cover translate-y-[70px] max-[400px]:w-[100px] max-[400px]:h-[100px]"
+                            alt="">
+                    </div>
+                    <div class="relative cursor-pointer" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                        data-aos="fade-up" data-aos-duration="900">
+                        <img src="./assets/images/bg_image.png" class="max-[400px]:w-full" alt="">
+                        <img src="./assets/images/play.svg"
+                            class="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] max-[600px]:w-[75px] max-[600px]:h-[75px]"
+                            alt="">
+                    </div>
+                </div>
+                <div
+                    class="translate-y-[-150px] max-[750px]:translate-y-[-80px] max-[600px]:translate-y-[-50px] bg-transparent select-none">
+                    <h1
+                        class="text-[90px] text-pBlue font-bold max-[850px]:text-[70px] max-[600px]:text-[40px] max-[400px]:text-[25px]">
+                        <span class="text-pOrangred">INSELL</span> savdo
+                        platformasi haqida qisqacha
+                    </h1>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-pBg pb-[20px] hidden">
+        <div class="container">
+            <h1 class="text-[45px] text-pBlack font-bold" data-aos="fade-up" data-aos-duration="700">
+                Biz bilan <br>
+                <span class="text-pOrangred">
+                    aloqa
+                </span>
+            </h1>
+            <div class="flex gap-6 mt-10 max-[1000px]:flex-wrap">
+                <div class="bg-pBlue flex flex-col justify-between w-7/12 h-[230px] p-[30px] rounded-[25px] max-[1000px]:w-full max-[1000px]:mb-10 max-[600px]:mb-20 max-[600px]:h-full "
+                    data-aos="fade-up" data-aos-duration="500">
+                    <p class="text-[25px] font-bold text-pWhite max-[400px]:text-[20px]" data-aos="fade-up"
+                        data-aos-duration="900">Здесь собраны инструкции и другие полезные материалы,
+                        которые
+                        помогут вам самостоятельно запустить рекламу
+                        и разобраться в сервисе</p>
+                    <div class="flex items-center justify-center translate-y-[50px] ">
+                        <div
+                            class="bg-pOrangred rounded-[30px] text-[30px] font-bold inline-block text-pWhite px-6 hover:scale-[1.05] duration-[0.3s] cursor-pointer max-[400px]:text-[22px]">
+                            Все
+                            материалы
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-pBlue w-5/12 p-[30px] rounded-[25px] h-[402px] flex flex-col justify-center items-center max-[1000px]:w-full"
+                    data-aos="fade-up" data-aos-duration="500">
+                    <div class="flex w-full justify-center items-center relative mb-10">
+                        <img src="./assets/images/smile1.png"
+                            class="w-[221px] h-[221px] object-cover absolute top-[-150px]  z-[2] max-[400px]:h-[130px] max-[400px]:w-[130px] max-[400px]:top-[-100px]"
+                            alt="">
+
+                    </div>
+                    <p class="text-[30px] font-bold text-pWhite text-center mb-4 max-[400px]:text-[24px]"
+                        data-aos="fade-up" data-aos-duration="900">Или можете <br>
+                        доверить всё нам</p>
+                    <p class="text-[22px] font-bold text-pWhite text-center max-[400px]:text-[18px]" data-aos="fade-up"
+                        data-aos-duration="900">Наши менеджеры займутся настройкой и
+                        запуском рекламной кампании.
+                        А вы получите все отчёты
+                        и статистику в личном кабинете</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-pBg " id="aloqa">
+        <div class="bg-pBlue rounded-t-[100px] max-[400px]:rounded-t-[60px]" data-aos="fade-up" data-aos-duration="500">
+            <div class="container">
+                <h1 class="text-[75px] pt-[100px] text-pWhite font-bold max-[600px]:text-[40px] max-[600px]:pt-[50px] max-[400px]:text-[25px] max-[400px]:mb-[10px]"
+                    data-aos="fade-up" data-aos-duration="700"><span class="text-pOrangred" data-aos="fade-up"
+                        data-aos-duration="900">3 oy </span>bepul
+                    foydalanib ko'rish uchun ushbu formani to'ldiring</h1>
+                <div class="flex gap-[100px] max-[1000px]:gap-[22px] max-[760px]:flex-col">
+                    <div class="w-5/12 translate-y-[100px]  max-[1000px]:w-full max-[760px]:translate-y-[0]">
+                        <input class="hidden" type="text" id="test" value="eruguer">
+                        <form>
+
+
+                            <input required id="name" type="text"
+                                class="w-full px-[10px] py-[20px] text-[20px] placeholder-gray-500 font-bold text-pBlack rounded-[20px] mb-[20px] focus:outline-none max-[400px]:py-[7px] max-[400px]:text-[18px] max-[400px]:py-[5px]"
+                                placeholder="Ism">
+                            <div
+                                class="w-full bg-pWhite flex items-center px-[10px] py-[20px] rounded-[20px] mb-[20px]  max-[400px]:py-[7px] max-[400px]:text-[18px] max-[400px]:py-[5px]  ">
+                                <h1 class=" text-[20px] font-bold text-pBlack me-1">+998 </h1>
+                                <input required id="phone" type="tel" maxlength="13"
+                                    class="focus:outline-none w-full bg-transparent bg-none placeholder-gray-500 text-[20px] font-bold text-pBlack"
+                                    placeholder="(99) 999-9999">
+                            </div>
+                            <select required id="direction"
+                                class="w-full px-[10px] py-[20px] text-[20px] font-bold text-pBlack rounded-[20px] mb-[20px] cursor-pointer focus:outline-none max-[400px]:py-[7px] max-[400px]:text-[18px] max-[400px]:py-[5px]">
+                                <option value="" selected="" disabled="">Yo'nalishni tanlang</option>
+                                <option value="Gilam Savdosi">Gilam Savdosi</option>
+                                <option value="Gul Savdosi">Gul Savdosi</option>
+                                <option value="Kompyuter va Aksesuarlar Savdosi">Kompyuter va Aksesuarlar Savdosi
+                                </option>
+                                <option value="Telefon va Aksesuarlari Savdosi">Telefon va Aksesuarlari Savdosi</option>
+                                <option value="Mebel Savdosi">Mebel Savdosi</option>
+                                <option value="Dori Darmon Savdosi (apteka)">Dori Darmon Savdosi (apteka)</option>
+                                <option value="Sport Jihozlari Savdosi">Sport Jihozlari Savdosi</option>
+                                <option value="Avto Ehtiyot Qismlari Savdosi">Avto Ehtiyot Qismlari Savdosi</option>
+                                <option value="Mato Savdo">Mato Savdo</option>
+                                <option value="Furnitura Savdosi">Furnitura Savdosi</option>
+                                <option value="Konstovar Savdosi">Konstovar Savdosi</option>
+                                <option value="Kiyim Kecha Savdosi">Kiyim Kechak Savdosi</option>
+                                <option value="Maishiy Texnika Savdosi">Maishiy Texnika Savdosi</option>
+                            </select>
+                            <div data-aos="fade-up" data-aos-duration="1000"
+                                class="flex items-center justify-center mt-[150px] max-[400px]:mt-[20px]   ">
+                                <button type="submit" id="submit"
+                                    class="bg-pOrangred rounded-[30px] text-[30px] font-bold inline-block text-pWhite px-[30px] py-[5px] hover:scale-[1.05] duration-[0.3s] cursor-pointer max-[400px]:text-[20px]">
+                                    Ariza qoldirish
+                                </button>
+                                <h1 id="success"
+                                    class="text-pOrangred rounded-[30px] text-[30px] font-bold inline-block px-[30px] py-[5px]  cursor-pointer max-[400px]:text-[20px]">
+                                    Tez orada siz bilan
+                                    bog'lanishadi
+                                </h1>
+
+                        </form>
+                    </div>
+                </div>
+                <div class="translate-y-[-120px] max-[760px]:translate-y-[0]">
+                    <div><img src="./assets/images/image1.png"
+                            class="w-[530px] h-[530px] object-cover max-[400px]:w-full max-[400px]:h-full"
+                            data-aos="fade-up" data-aos-duration="700" alt="">
+                    </div>
+                    <div data-aos="fade-up" data-aos-duration="700">
+                        <h2 class="text-[50px] text-pWhite font-bold max-[1000px]:text-[35px] max-[600px]:text-[30px] max-[400px]:text-[20px]"
+                            data-aos="fade-up" data-aos-duration="900">Yoki quyidagi
+                            raqamga telefon qiling:</h2>
+                        <a href="tel:+998 33 519 09 01"
+                            class="text-[55px] text-pOrangred font-bold max-[1000px]:text-40px max-[600px]:text-[33px] max-[400px]:text-[20px]"
+                            data-aos="fade-up" data-aos-duration="900">+998 33 519 09 01</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="bg-pBlue pb-[100px]">
+        <div class="container">
+            <div class="mb-10 max-[600px]:flex max-[600px]:items-center max-[600px]:justify-center">
+                <img src="./assets/images/logo1.png"
+                    class="w-[250px] object-cover max-[500px]:w-7/12 max-[500px]:mt-[20px]" data-aos="fade-up"
+                    data-aos-duration="700" alt="">
+            </div>
+            <div class="flex justify-evenly  flew-wrap max-[600px]:flex-col">
+                <div class="flex-auto max-[600px]:flex max-[600px]:flex-col max-[600px]:mb-[10px] max-[600px]:items-center"
+                    data-aos="fade-up" data-aos-duration="500">
+                    <a href="https://www.instagram.com/insell_savdo?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                        class="text-[20px] text-pWhite font-bold mb-[15px] flex items-center"><img
+                            src="./assets/images/instagram-removebg-preview.png"
+                            class="w-[50px] h-[50px] object-cover me-2" alt=""> Instagram
+                    </a>
+                </div>
+                <div class="flex-auto max-[600px]:flex max-[600px]:flex-col max-[600px]:mb-[10px] max-[600px]:items-center"
+                    data-aos="fade-up" data-aos-duration="700">
+                    <a href="https://youtube.com/@insell_uz?si=CK7BoXL8HLC1CHj6"
+                        class="text-[20px] text-pWhite font-bold mb-[15px] flex items-center"><img
+                            src="./assets/images/youtube-removebg-preview.png"
+                            class="w-[50px] h-[50px] object-cover me-2" alt=""> YouTube
+                    </a>
+                </div>
+                <div class="flex-auto max-[600px]:flex max-[600px]:flex-col max-[600px]:mb-[10px] max-[600px]:items-center"
+                    data-aos="fade-up" data-aos-duration="900">
+                    <a href="https://t.me/CRUD_IT_COMPANY"
+                        class="text-[20px] text-pWhite font-bold mb-[15px] flex items-center"><img
+                            src="./assets/images/telegram-removebg-preview.png"
+                            class="w-[50px] h-[50px] object-cover me-2" alt=""> Telegram
+                    </a>
+                </div>
+                <div class="flex-auto px-[10px] max-[600px]:flex max-[600px]:flex-col max-[600px]:mb-[10px] max-[600px]:items-center"
+                    data-aos="fade-up" data-aos-duration="1000">
+                    <div class="w-full h-[300px] rounded-[20px] overflow-hidden" id="map">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>
