@@ -1,4 +1,5 @@
 AOS.init();
+
 let btn = document.getElementById('btn')
 let submit = document.getElementById('submit')
 let names = document.getElementById('name');
@@ -22,8 +23,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
         success.classList.add('hidden');
         let submit = document.getElementById('submit');
         submit.classList.remove('hidden');
-
-        console.log(submit, 'bug');
     }
     let params = (new URL(document.location)).searchParams;
     let target = params.get("t");
@@ -129,13 +128,67 @@ document.addEventListener("DOMContentLoaded", (event) => {
                 })
         }
     }
+    function post() {
+        let data = {
+            name: document.querySelector('#name').value,
+            number: document.querySelector('#phone').value,
+            field: document.querySelector('#direction').value,
+            token: target
+        };
+        axios.post('https://admin.api-insell.uz/reaching/create', data).then((res) => {
+            const Toast = Swal.mixin({
+                toast: true,
+                position: "top-right",
+                showConfirmButton: false,
+                timer: 1500,
+                timerProgressBar: true,
+                didOpen: (toast) => {
+                    toast.addEventListener("mouseenter", Swal.stopTimer);
+                    toast.addEventListener("mouseleave", Swal.resumeTimer);
+                },
+            });
+            let success = document.getElementById('success');
+            success.classList.remove('hidden');
+            let submit = document.getElementById('submit');
+            submit.classList.add('hidden');
+            return Toast.fire({
+                icon: 'success',
+                title: "Siz ro'yhatdan o'tdinggiz",
+            });
+        }).catch(error => {
+            const Toast = Swal.mixin({
+                toast: true,
+                position: "top-right",
+                showConfirmButton: false,
+                timer: 1500,
+                timerProgressBar: true,
+                didOpen: (toast) => {
+                    toast.addEventListener("mouseenter", Swal.stopTimer);
+                    toast.addEventListener("mouseleave", Swal.resumeTimer);
+                },
+            });
+            let success = document.getElementById('success');
+            success.classList.remove('hidden');
+            let submit = document.getElementById('submit');
+            submit.classList.add('hidden');
+            return Toast.fire({
+                icon: 'error',
+                title: "Xatolik yuz berdi",
+            });
+        });
+
+
+    }
+
+
+
     submit.addEventListener("click", () => {
         var name = document.querySelector('#name').value;
         var phone = document.querySelector('#phone').value;
         var direction = document.querySelector('#direction').value;
         if (name && phone && direction) {
             request();
-            console.log('hello');
+            post();
         }
 
     });
@@ -150,11 +203,11 @@ ymaps.ready(init);
 
 function init() {
     var myMap = new ymaps.Map('map', {
-            center: [ 40.386515, 71.783323],
-            zoom: 8
-        }, {
-            searchControlProvider: 'yandex#search'
-        }),
+        center: [40.386515, 71.783323],
+        zoom: 16
+    }, {
+        searchControlProvider: 'yandex#search'
+    }),
         myPlacemark = new ymaps.Placemark(myMap.getCenter());
 
     myMap.geoObjects.add(myPlacemark);
@@ -168,6 +221,27 @@ function init() {
         });
 }
 
+
+let iframe_modal = document.getElementById('iframe_modal');
+let iframe = document.getElementById('iframe');
+let exampleModal = document.getElementById('exampleModal');
+
+exampleModal.addEventListener('click', () => {
+    if (!exampleModal.className.includes('show')) {
+
+    }
+});
+iframe_modal.addEventListener('click', () => {
+
+    iframe.src = 'https://www.youtube.com/embed/0Upayzo8pmU?si=xBqVw9i0VkUMipFc';
+
+})
+window.addEventListener('click', (event) => {
+    console.log(event.target.className, 'log');
+    if (event.target.className.includes('modal modal-xl fade') || event.target.className.includes('btn')) {
+        iframe.src = " ";
+    }
+})
 
 
 

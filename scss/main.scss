@@ -12,7 +12,7 @@
     list-style: none;
     text-decoration: none;
     font-family: "Arial" sans-serif;
-    // outline: 1px solid red;
+    outline: 1px solid red;
 }
 
 body {
@@ -30,23 +30,6 @@ html{
     padding: 0 20px !important;
 }
 
-// input::-webkit-outer-spin-button,
-// input::-webkit-inner-spin-button {
-//     -webkit-appearance: none;
-//     margin: 0;
-// }
-
-// input[type=number] {
-//     -moz-appearance: textfield;
-// }
-// select::-webkit-outer-spin-button,
-// select::-webkit-inner-spin-button {
-//     -webkit-appearance: none;
-//     margin: 0;
-// }
-// select{
-//     -moz-appearance: textfield;
-// }
 
 ::-webkit-scrollbar {
     width: 8px;
