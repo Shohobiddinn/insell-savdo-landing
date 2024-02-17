@@ -20,15 +20,13 @@ document.addEventListener("DOMContentLoaded", (event) => {
         let directionAtt = document.querySelector('#direction');
         submit.setAttribute("disabled", "");
         submit.classList.remove("cursor-pointer"),
-        submit.classList.remove("text-[30px]"),
-        submit.classList.add("text-[18px]")
+            submit.classList.remove("text-[30px]"),
+            submit.classList.add("text-[18px]")
         submit.innerHTML = "  Arizangiz qabul qilindi. <br/>Mutaxasislarimiz tez orada bog'lanadi";
         nameAtt.setAttribute('readonly', "")
         phoneAtt.setAttribute('readonly', "")
         directionAtt.setAttribute('disabled', "")
     } else {
-        let success = document.getElementById('success');
-        success.classList.add('hidden');
         let submit = document.getElementById('submit');
         submit.classList.remove('hidden');
     }
@@ -113,6 +111,10 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
                             let submit = document.getElementById('submit');
                             submit.innerHTML = "  Arizangiz qabul qilindi. <br/>Mutaxasislarimiz tez orada bog'lanadi";
+                            submit.setAttribute("disabled", "");
+                            submit.classList.remove("cursor-pointer"),
+                                submit.classList.remove("text-[30px]"),
+                                submit.classList.add("text-[18px]")
                             return Toast.fire({
                                 icon: 'success',
                                 title: "Siz ro'yhatdan o'tdinggiz",
@@ -185,6 +187,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
 
     submit.addEventListener("click", () => {
+        console.log('qwq');
         var name = document.querySelector('#name').value;
         var phone = document.querySelector('#phone').value;
         var direction = document.querySelector('#direction').value;
