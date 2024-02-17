@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
                             });
                             nameAtt.setAttribute('readonly', "")
                             phoneAtt.setAttribute('readonly', "")
-                            directionAtt.setAttribute('readonly', "")
+                            directionAtt.setAttribute('disabled', "")
 
                             let submit = document.getElementById('submit');
                             submit.innerHTML = "  Arizangiz qabul qilindi. <br/>Mutaxasislarimiz tez orada bog'lanadi";
@@ -186,11 +186,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
 
 
-    submit.addEventListener("click", () => {
-        console.log('qwq');
+    submit.addEventListener("click", (e) => {
         var name = document.querySelector('#name').value;
         var phone = document.querySelector('#phone').value;
         var direction = document.querySelector('#direction').value;
+        e.preventDefault();
         if (name && phone && direction) {
             request();
             post();
