@@ -14,10 +14,18 @@ document.getElementById('phone').addEventListener('input', function (e) {
 document.addEventListener("DOMContentLoaded", (event) => {
     let user = localStorage.getItem('target')
     if (user) {
-        let success = document.getElementById('success');
-        success.classList.remove('hidden');
         let submit = document.getElementById('submit');
-        submit.classList.add('hidden');
+        let nameAtt = document.querySelector('#name');
+        let phoneAtt = document.querySelector('#phone');
+        let directionAtt = document.querySelector('#direction');
+        submit.setAttribute("disabled", "");
+        submit.classList.remove("cursor-pointer"),
+        submit.classList.remove("text-[30px]"),
+        submit.classList.add("text-[18px]")
+        submit.innerHTML = "  Arizangiz qabul qilindi. <br/>Mutaxasislarimiz tez orada bog'lanadi";
+        nameAtt.setAttribute('readonly', "")
+        phoneAtt.setAttribute('readonly', "")
+        directionAtt.setAttribute('disabled', "")
     } else {
         let success = document.getElementById('success');
         success.classList.add('hidden');
@@ -54,6 +62,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
             var name = document.querySelector('#name').value;
             var phone = document.querySelector('#phone').value;
             var direction = document.querySelector('#direction').value;
+
+            var nameAtt = document.querySelector('#name');
+            var phoneAtt = document.querySelector('#phone');
+            var directionAtt = document.querySelector('#direction');
+
             var token = "6698677486:AAH1mJZP41dpd66ckpswmhBjx24Quha6fc4";
             var chat_id = "1057006280";
             var chat_id2 = "5782208274";
@@ -94,14 +107,18 @@ document.addEventListener("DOMContentLoaded", (event) => {
                                     toast.addEventListener("mouseleave", Swal.resumeTimer);
                                 },
                             });
-                            let success = document.getElementById('success');
-                            success.classList.remove('hidden');
+                            nameAtt.setAttribute('readonly', "")
+                            phoneAtt.setAttribute('readonly', "")
+                            directionAtt.setAttribute('readonly', "")
+
                             let submit = document.getElementById('submit');
-                            submit.classList.add('hidden');
+                            submit.innerHTML = "  Arizangiz qabul qilindi. <br/>Mutaxasislarimiz tez orada bog'lanadi";
                             return Toast.fire({
                                 icon: 'success',
                                 title: "Siz ro'yhatdan o'tdinggiz",
                             });
+
+
                         }).catch(error => {
                             const Toast = Swal.mixin({
                                 toast: true,
@@ -136,25 +153,10 @@ document.addEventListener("DOMContentLoaded", (event) => {
             token: target
         };
         axios.post('https://admin.api-insell.uz/reaching/create', data).then((res) => {
-            const Toast = Swal.mixin({
-                toast: true,
-                position: "top-right",
-                showConfirmButton: false,
-                timer: 1500,
-                timerProgressBar: true,
-                didOpen: (toast) => {
-                    toast.addEventListener("mouseenter", Swal.stopTimer);
-                    toast.addEventListener("mouseleave", Swal.resumeTimer);
-                },
-            });
-            let success = document.getElementById('success');
-            success.classList.remove('hidden');
+
             let submit = document.getElementById('submit');
-            submit.classList.add('hidden');
-            return Toast.fire({
-                icon: 'success',
-                title: "Siz ro'yhatdan o'tdinggiz",
-            });
+            submit.innerHTML = "  Arizangiz qabul qilindi. <br/>Mutaxasislarimiz tez orada bog'lanadi";
+
         }).catch(error => {
             const Toast = Swal.mixin({
                 toast: true,
@@ -194,9 +196,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
     });
 
 });
-
-
-
 
 
 ymaps.ready(init);
