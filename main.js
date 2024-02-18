@@ -24,8 +24,12 @@ document.addEventListener("DOMContentLoaded", (event) => {
         let submit = document.getElementById('submit');
         submit.classList.remove('hidden');
     }
-    let params = (new URL(document.location)).searchParams;
-    let target = params.get("t");
+    // let params = (new URL(document.location)).searchParams;
+    const params = new Proxy(new URLSearchParams(window.location.search), {
+        get: (searchParams, prop) => searchParams.get(prop),
+    });
+    let target = params.target;
+    console.log(target);
     if (target) {
         const requestOptions = {
             method: 'POST',
@@ -36,11 +40,12 @@ document.addEventListener("DOMContentLoaded", (event) => {
                 target: target
             })
         };
-        fetch('https://api-insell.uz/target', requestOptions)
+        fetch(`https://admin.api-insell.uz/target_router/add_view?token=${target}`,requestOptions)
             .then(response => response.json())
             .then(data => console.log(data));
+            
     } else console.log('no target query');
-
+    
     if (localStorage.getItem("target")) {
         let target = JSON.parse(localStorage.getItem("target"))
         document.querySelector('#name').value = target.name;
@@ -50,6 +55,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     }
 
     function request() {
+
         if (!localStorage.getItem("target")) {
             var name = document.querySelector('#name').value;
             var phone = document.querySelector('#phone').value;
@@ -182,7 +188,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
 
 
-    submit.addEventListener("click", () => {
+    submit.addEventListener("click", (evt) => {
+        evt.preventDefault();
         var name = document.querySelector('#name').value;
         var phone = document.querySelector('#phone').value;
         var direction = document.querySelector('#direction').value;
